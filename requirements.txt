@@ -10,3 +10,4 @@ multidict==6.0.2
 twitchio==2.3.0
 typing_extensions==4.2.0
 yarl==1.7.2
+bjoern==3.1.0
