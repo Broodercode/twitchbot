@@ -24,11 +24,9 @@ class Bot(commands.Bot):
             'eatitup_86',
             'kazenone',
             'keddril',
-            'ultrosgambini',
             'solarcell007',
             'pojodin1',
             'theretrorunner',
-            'lackattack'
         ])
 
     async def event_ready(self):
@@ -52,7 +50,7 @@ class Bot(commands.Bot):
 
 
 scheduler = BackgroundScheduler()
-scheduler.add_job(stream_ping, 'interval', seconds=60)
+scheduler.add_job(stream_ping, 'interval', seconds=180)
 scheduler.start()
 
 bot = Bot()
