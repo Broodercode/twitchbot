@@ -14,12 +14,12 @@ stream_data_url = STREAM_DATA_URL
 
 def stream_ping():
     print('tick')
-    url = 'https://api.twitch.tv/helix/streams?&user_login=theretrorunner&user_login=pojodin1&user_login=solarcell007&user_login=liftedsenses&user_login=eatitup_86&user_login=zheal&user_login=broodvx&user_login=ultrosgambini&user_login=throggtv&user_login=yogidamonk&user_login=dyne_nuitari&user_login=bdudegames&user_login=kazenone&user_login=keddril&user_login=broodvx&user_login=overswarm&user_login=antfoolish'
+    url = 'https://api.twitch.tv/helix/streams?user_login=yogidamonk&user_login=eatitup_86&user_login=zheal&user_login=broodvx&user_login=throggtv'
     headers = {'Authorization': BEARER, 'Client-Id': CLIENT_ID}
     res = requests.get(url=url, headers=headers).json()
     data = res['data']
     print(len(data))
-    # print(data)
+    print(data)
     global stream_dataset
     global stream_temp
     global stream_offline
