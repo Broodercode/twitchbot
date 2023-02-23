@@ -63,7 +63,7 @@ class Bot(commands.Bot):
                 print('wow')
                 playsound('wow.mp3')
                 
-        if 'bro' in ctx.content and not 'brood' in ctx.content and ctx.tags['room-id'] == '622249091' or 'brah' in ctx.content and ctx.tags['room-id'] == '622249091' or 'bruh' in ctx.content and ctx.tags['room-id'] == '622249091':
+        if 'bro' in ctx.content and not 'brood' in ctx.content and ctx.tags['room-id'] == '622249091' or 'brah' in ctx.content and ctx.tags['room-id'] == '622249091' or 'bruh' in ctx.content and ctx.tags['room-id'] == '622249091' or 'broodv1Brud' in ctx.content and ctx.tags['room-id'] == '622249091':
             
             rand = "%02d" % random.randint(1, 55)
             print(ctx.content)
