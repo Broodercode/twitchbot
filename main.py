@@ -63,7 +63,8 @@ class Bot(commands.Bot):
                 print('wow')
                 playsound('wow.mp3')
                 
-        if 'bro' in ctx.content and not 'brood' in ctx.content and ctx.tags['room-id'] == '622249091' or 'brah' in ctx.content and ctx.tags['room-id'] == '622249091' or 'bruh' in ctx.content and ctx.tags['room-id'] == '622249091' or 'broodv1Brud' in ctx.content and ctx.tags['room-id'] == '622249091':
+                
+        if 'bro' in ctx.content and not 'brood' in ctx.content and ctx.tags['room-id'] == '622249091' or 'brah' in ctx.content and ctx.tags['room-id'] == '622249091' or 'bruh' in ctx.content and ctx.tags['room-id'] == '622249091':
             
             rand = "%02d" % random.randint(1, 55)
             print(ctx.content)
@@ -83,6 +84,10 @@ class Bot(commands.Bot):
                 print('brobro')
                 broCount = 0
         
+        if 'broodv1Brud' in ctx.content and ctx.tags['room-id'] == '622249091':
+            print(ctx.content)
+            playsound('./audio/broodDerp.mp3')
+            
         if 'lol' in ctx.content and ctx.tags['room-id'] == '622249091' or 'LOL' in ctx.content and ctx.tags['room-id'] == '622249091' or 'LUL' in ctx.content and ctx.tags['room-id'] == '622249091' or 'KEKW' in ctx.content and ctx.tags['room-id'] == '622249091' or "haha" in ctx.content and ctx.tags['room-id'] == '622249091' or "lmao" in ctx.content and ctx.tags['room-id'] == '622249091' or "LMAO" in ctx.content and ctx.tags['room-id'] == '622249091' or "LMFAO" in ctx.content and ctx.tags['room-id'] == '622249091' or "lmfao" in ctx.content and ctx.tags['room-id'] == '622249091': 
 
             f = open("brood.txt", "a")
