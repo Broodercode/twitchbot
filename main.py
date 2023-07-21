@@ -8,8 +8,6 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from playsound import playsound
 
 
-
-
 from env import ACCESS_TOKEN
 wow_num = 0
 url = 'http://127.0.0.1:5000/bot'
@@ -64,7 +62,7 @@ class Bot(commands.Bot):
                 playsound('wow.mp3')
                 
                 
-        if 'bro' in ctx.content and not 'brood' in ctx.content and ctx.tags['room-id'] == '622249091' or 'brah' in ctx.content and ctx.tags['room-id'] == '622249091' or 'bruh' in ctx.content and ctx.tags['room-id'] == '622249091':
+        if 'bro' in ctx.content and not 'brood' in ctx.content and ctx.tags['room-id'] == '622249091' or 'brah' in ctx.content and ctx.tags['room-id'] == '622249091' or 'bruh' in ctx.content and ctx.tags['room-id'] == '622249091' or 'breh' in ctx.content and ctx.tags['room-id'] == '622249091' or 'bruv' in ctx.content and ctx.tags['room-id'] == '622249091':
             
             rand = "%02d" % random.randint(1, 55)
             print(ctx.content)
