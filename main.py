@@ -3,8 +3,8 @@ import requests
 import datetime
 import random
 from datetime import timezone, datetime
-from stream_check import stream_ping 
-from apscheduler.schedulers.background import BackgroundScheduler
+# from stream_check import stream_ping 
+# from apscheduler.schedulers.background import BackgroundScheduler
 from playsound import playsound
 
 from env import ACCESS_TOKEN 
@@ -28,6 +28,13 @@ class Bot(commands.Bot):
         self.handle_bro(ctx)
         self.handle_broodv1Brud(ctx)
         await self.handle_greeting(ctx)
+        await self.handle_follow(ctx)
+
+    # async def handle_follow(self, ctx):
+    #     if ctx.tags['msg-id'] == 'follow':
+    #         user = ctx.author.name
+    #         print(user)
+    #         await ctx.channel.send(f"BroodVX thanks you for the follow, {user}!")
 
 ## -- The following code is for debugging purposes -- ##
         # if ctx.author:
@@ -132,7 +139,12 @@ class Bot(commands.Bot):
                     f_append.write(user + "\n")
                     # Send a greeting message to the channel
                     await ctx.channel.send(f"Hey! BroodVX welcomes you to the stream, {user}!")  # Use 'ctx.channel.send' to send the message
-                    playsound('./audio/hey.mp3')
+                    randSound = random.randint(1, 10)
+                    print(randSound)
+                    if randSound == 1:
+                        playsound('./audio/heyBOF.wav')
+                    else:
+                        playsound('./audio/hey.mp3')
         else:
             return
             # Open the file in read mode to check if the user is in the list
@@ -151,9 +163,9 @@ class Bot(commands.Bot):
     #             with open(filename, "a") as f:
     #                 f.write(f"{ts}: {ctx.author.name}: {ctx.content}\n")
 
-scheduler = BackgroundScheduler() 
-scheduler.add_job(stream_ping, 'interval', seconds=180) 
-scheduler.start()
+# scheduler = BackgroundScheduler() 
+# scheduler.add_job(stream_ping, 'interval', seconds=180) 
+# scheduler.start()
 
 bot = Bot()
 bot.run()
