@@ -167,5 +167,6 @@ class Bot(commands.Bot):
 # scheduler.add_job(stream_ping, 'interval', seconds=180) 
 # scheduler.start()
 
-bot = Bot()
-bot.run()
+if __name__ == '__main__':
+    bot = Bot()
+    bot.run()
